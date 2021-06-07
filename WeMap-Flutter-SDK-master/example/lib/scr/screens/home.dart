@@ -22,6 +22,9 @@ import 'package:wemapgl_example/scr/widgets/loading.dart';
 import 'package:wemapgl_example/scr/widgets/restaurant.dart';
 import 'package:provider/provider.dart';
 
+import '../../full_map.dart';
+import '../../search.dart';
+
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -278,6 +281,12 @@ class _HomeState extends State<Home> {
                 ],
               ),
             ),
+      floatingActionButton: FloatingActionButton(
+        // onPressed: () =>Navigator.push(context, MaterialPageRoute(builder: (context) => MapUiBody())),
+        onPressed: () =>Navigator.push(context, MaterialPageRoute(builder: (context) => SearchPage())),
+        tooltip: 'WeMap',
+        child: Icon(Icons.pin_drop_outlined),
+      ),
     );
   }
 }

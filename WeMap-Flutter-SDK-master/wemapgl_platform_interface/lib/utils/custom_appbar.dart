@@ -1,5 +1,6 @@
-
+//
 part of wemapgl;
+
 
 class CustomAppBar extends AppBar {
   /// Creates a material design app bar.

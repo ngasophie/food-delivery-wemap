@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:wemapgl/wemapgl.dart';
+import '../wemapgl_platform_interface.dart';
 import 'language_vi.dart';
 
 String key = 'key=${Configuration.weMapKey}';
@@ -30,6 +31,7 @@ String apiSearch(String input, LatLng latLng, WeMapGeocoder geocoder) {
       break;
   }
 }
+
 
 ///Reverse
 String apiReverse(LatLng latLng) {

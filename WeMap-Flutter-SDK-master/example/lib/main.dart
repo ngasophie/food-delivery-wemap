@@ -9,8 +9,9 @@ import 'package:wemapgl_example/scr/screens/login.dart';
 import 'package:wemapgl_example/scr/screens/splash.dart';
 import 'package:wemapgl_example/scr/widgets/loading.dart';
 import 'package:provider/provider.dart';
-
+import 'package:wemapgl/wemapgl.dart' as WEMAP;
 void main() {
+  WEMAP.Configuration.setWeMapKey('GqfwrZUEfxbwbnQUhtBMFivEysYIxelQ');
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MultiProvider(
       providers: [

@@ -3,6 +3,7 @@ library wemapgl_platform_interface;
 import 'dart:convert';
 import 'dart:math';
 import 'dart:typed_data';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
