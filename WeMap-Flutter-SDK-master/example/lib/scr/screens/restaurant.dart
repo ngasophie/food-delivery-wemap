@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wemapgl_example/place_symbol.dart';
 import 'package:wemapgl_example/scr/helpers/screen_navigation.dart';
 import 'package:wemapgl_example/scr/helpers/style.dart';
 import 'package:wemapgl_example/scr/models/category.dart';
@@ -10,9 +11,10 @@ import 'package:wemapgl_example/scr/widgets/product.dart';
 import 'package:wemapgl_example/scr/widgets/small_floating_button.dart';
 import 'package:provider/provider.dart';
 import 'package:transparent_image/transparent_image.dart';
-
+import 'package:wemapgl_example/simpleDirection.dart';
 import 'details.dart';
-
+import './../../locationRestaurant.dart';
+import './../../simpleDirection.dart';
 class RestaurantScreen extends StatelessWidget {
   final RestaurantModel restaurantModel;
 
@@ -20,6 +22,12 @@ class RestaurantScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("The LOCATED ISSSSS: ${this.restaurantModel.name}");
+    print("The LOCATED ISSSSS: ${this.restaurantModel.located}");
+    print("The LOCATED ISSSSS: ${this.restaurantModel.located}");
+    print("The LOCATED ISSSSS: ${this.restaurantModel.located}");
+    print("The LOCATED ISSSSS: ${this.restaurantModel.located}");
+    print("The LOCATED ISSSSS: ${this.restaurantModel.located}");
     final productProvider = Provider.of<ProductProvider>(context);
 
     return Scaffold(
@@ -166,7 +174,13 @@ class RestaurantScreen extends StatelessWidget {
                 children: <Widget>[
                   CustomText(text: "Open", color: green, weight: FontWeight.w400, size: 18,),
                   Container(
-                      child: FlatButton.icon(onPressed: (){}, icon: Icon(Icons.restaurant_menu), label: CustomText(text: "Book Now")))
+                      child: FlatButton.icon(onPressed: (){}, icon: Icon(Icons.restaurant_menu), label: CustomText(text: "Book Now")),
+                  ),
+                  Container(
+                    child: FlatButton.icon(
+                    onPressed: () =>Navigator.push(context, MaterialPageRoute(builder: (context) => FullMapPage(value:restaurantModel.located))),
+                        icon: Icon(Icons.pin_drop_outlined), label: CustomText(text: "View on Map")),
+                  )
                 ],
               ),
 

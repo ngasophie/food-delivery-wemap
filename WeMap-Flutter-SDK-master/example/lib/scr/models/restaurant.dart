@@ -9,7 +9,7 @@ class RestaurantModel {
   static const IMAGE = "image";
   static const POPULAR = "popular";
   static const USER_LIKES = "userLikes";
-
+  static const LOCATED = 'located';
 
 
   String _id;
@@ -20,6 +20,7 @@ class RestaurantModel {
   int _avgPrice;
   bool _popular;
   int _rates;
+  String _located;
 
 //  getters
   String get id => _id;
@@ -37,6 +38,7 @@ class RestaurantModel {
   bool get popular => _popular;
 
   int get rates => _rates;
+  String get located => _located;
 
   // public variable
   bool liked = false;
@@ -50,5 +52,6 @@ class RestaurantModel {
     _rating = snapshot.data[RATING];
     _popular = snapshot.data[POPULAR];
     _rates = snapshot.data[RATES];
+    _located = snapshot.data[LOCATED];
   }
 }

@@ -22,7 +22,7 @@ import 'package:wemapgl_example/scr/widgets/loading.dart';
 import 'package:wemapgl_example/scr/widgets/restaurant.dart';
 import 'package:provider/provider.dart';
 
-import '../../full_map.dart';
+import '../../map.dart';
 import '../../search.dart';
 
 class Home extends StatefulWidget {
