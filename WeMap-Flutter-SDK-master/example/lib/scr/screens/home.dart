@@ -283,7 +283,7 @@ class _HomeState extends State<Home> {
             ),
       floatingActionButton: FloatingActionButton(
         // onPressed: () =>Navigator.push(context, MaterialPageRoute(builder: (context) => MapUiBody())),
-        onPressed: () =>Navigator.push(context, MaterialPageRoute(builder: (context) => SearchPage())),
+        onPressed: () =>Navigator.push(context, MaterialPageRoute(builder: (context) => FullMapPage())),
         tooltip: 'WeMap',
         child: Icon(Icons.pin_drop_outlined),
       ),

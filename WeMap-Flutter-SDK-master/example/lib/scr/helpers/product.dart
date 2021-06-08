@@ -48,13 +48,17 @@ class ProductServices {
       });
 
   Future<List<ProductModel>> searchProducts({String productName}) {
+    print("THE NUMBER OF PRODUCTS DETECTED IS: ${productName}");
+    print("THE NUMBER OF PRODUCTS DETECTED IS: ${productName}");
+    print("THE NUMBER OF PRODUCTS DETECTED IS: ${productName}");
     // code to convert the first character to uppercase
     String searchKey = productName[0].toUpperCase() + productName.substring(1);
+    print("THE NUMBER OF PRODUCTS DETECTED IS: ${searchKey}");
     return _firestore
         .collection(collection)
         .orderBy("name")
-        .startAt([searchKey])
-        .endAt([searchKey + '\uf8ff'])
+        .startAt([productName])
+        .endAt([productName + '\uf8ff'])
         .getDocuments()
         .then((result) {
           List<ProductModel> products = [];

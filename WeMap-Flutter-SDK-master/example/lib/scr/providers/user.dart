@@ -68,7 +68,8 @@ class UserProvider with ChangeNotifier{
           'email':email.text,
           'uid':result.user.uid,
           "likedFood": [],
-          "likedRestaurants": []
+          "likedRestaurants": [],
+          "cart": []
         });
       });
       return true;
