@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\Nga\\UET\\KPDL App Flutter\\wemap-app\\food-delivery-wemap\\WeMap-Flutter-SDK-master\\example\\build\\url_launcher\\intermediates\\res\\merged\\debug\\values-lo\\values-lo.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\DAI\\.gradle\\caches\\transforms-2\\files-2.1\\922203b02f6e4e6caeeab3036035a276\\core-1.1.0\\res\\values-lo\\values-lo.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\Nga\\UET\\KPDL App Flutter\\wemap-app\\food-delivery-wemap\\WeMap-Flutter-SDK-master\\example\\build\\url_launcher\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-lo\\values-lo.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\DAI\\.gradle\\caches\\transforms-2\\files-2.1\\922203b02f6e4e6caeeab3036035a276\\core-1.1.0\\res\\values-lo\\values-lo.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}
