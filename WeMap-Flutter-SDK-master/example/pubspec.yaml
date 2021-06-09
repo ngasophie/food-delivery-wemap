@@ -47,6 +47,7 @@ flutter:
 
   assets:
     - assets/symbols/custom-icon.png
+    - assets/symbols/place-icon.png
     - assets/symbols/origin.png
     - assets/symbols/destination.png
     - assets/symbols/2.0x/custom-icon.png

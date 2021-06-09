@@ -27,7 +27,7 @@ class PlaceSymbolBody extends StatefulWidget {
 class PlaceSymbolBodyState extends State<PlaceSymbolBody> {
   PlaceSymbolBodyState();
 
-  static final LatLng center = const LatLng(20.86711, 105.1947171);
+  static final LatLng center = const LatLng(105.751223, 20.989644);
 
   WeMapController controller;
   int _symbolCount = 0;
@@ -65,6 +65,14 @@ class PlaceSymbolBodyState extends State<PlaceSymbolBody> {
   }
 
   void _add(String iconImage) {
+    print("The ATTTTTTTTTTTTTTTTTTTT: ${center.longitude}");
+    print("The ATTTTTTTTTTTTTTTTTTTT: ${center.latitude}");
+    print("The ATTTTTTTTTTTTTTTTTTTT: ${center.latitude}");
+    print("The ATTTTTTTTTTTTTTTTTTTT: ${center.latitude}");
+    print("The ATTTTTTTTTTTTTTTTTTTT: ${center.latitude}");
+    print("The ATTTTTTTTTTTTTTTTTTTT: ${center.latitude}");
+    print("The ATTTTTTTTTTTTTTTTTTTT: ${center.latitude}");
+    print("The ATTTTTTTTTTTTTTTTTTTT: ${center.latitude}");
     controller.addSymbol(
       SymbolOptions(
         geometry: LatLng(
@@ -74,9 +82,6 @@ class PlaceSymbolBodyState extends State<PlaceSymbolBody> {
         iconImage: iconImage,
       ),
     );
-    setState(() {
-      _symbolCount += 1;
-    });
   }
 
   void _remove() {
