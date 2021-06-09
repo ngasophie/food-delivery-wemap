@@ -118,7 +118,7 @@ class FullMapState extends State<FullMap> {
         CameraUpdate.newCameraPosition(
           CameraPosition(
             target: place.location,
-            zoom: 18.0,
+            zoom: 16.0,
           ),
         ),
       );

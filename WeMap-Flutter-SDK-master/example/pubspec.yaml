@@ -51,9 +51,11 @@ flutter:
     - assets/symbols/origin.png
     - assets/symbols/destination.png
     - assets/symbols/2.0x/custom-icon.png
+    - assets/symbols/2.0x/place-icon.png
     - assets/symbols/2.0x/origin.png
     - assets/symbols/2.0x/destination.png
     - assets/symbols/3.0x/custom-icon.png
+    - assets/symbols/3.0x/place-icon.png
     - assets/symbols/3.0x/origin.png
     - assets/symbols/3.0x/destination.png
     - assets/geojson/ne_10m_ports.geojson
