@@ -54,6 +54,7 @@ class FullMapState extends State<FullMap> {
   void _onMapCreated(WeMapController controller) {
     mapController = controller;
     mapController.onSymbolTapped.add(_onSymbolTapped);
+
     // this.controller = controller;
   }
 
@@ -72,6 +73,7 @@ class FullMapState extends State<FullMap> {
     print(places[0].fullJSON['geometry']['coordinates'][1]);
     center = LatLng(places[0].fullJSON['geometry']['coordinates'][1],
         places[0].fullJSON['geometry']['coordinates'][0]);
+
     return places.length > 0 ? places[0] : WeMapPlace(location: myLatLng);
   }
 
@@ -103,6 +105,7 @@ class FullMapState extends State<FullMap> {
 
   @override
   void initState() {
+
     super.initState();
     // 210 Hoang Quoc Viet
     // 122 Hoàng Hoa Thám
@@ -110,6 +113,7 @@ class FullMapState extends State<FullMap> {
       setState(() {
         place = _place;
       });
+      this._add("assets/symbols/custom-icon.png");
       mapController.moveCamera(
         CameraUpdate.newCameraPosition(
           CameraPosition(
@@ -121,7 +125,24 @@ class FullMapState extends State<FullMap> {
       mapController.showPlaceCard(place);
     });
   }
-
+  void _add(String iconImage) {
+    print(myLatLng);
+    print(FullMapState.center);
+    print(FullMapState.center);
+    print(FullMapState.center);
+    print(FullMapState.center);
+    print(FullMapState.center);
+    print(FullMapState.center);
+    mapController.addSymbol(
+      SymbolOptions(
+        geometry: LatLng(
+          center.latitude,
+          center.longitude,
+        ),
+        iconImage: iconImage,
+      ),
+    );
+  }
   @override
   Widget build(BuildContext context) {
     // return new Scaffold(
@@ -168,7 +189,28 @@ class FullMapState extends State<FullMap> {
     //     ],
     //   ),
     // );
-    return const PlaceSymbolBody();
+
+    return new Scaffold(
+      body: Stack(
+        children: <Widget>[
+          WeMap(
+            onMapClick: (point, latlng, _place) async {
+              place = await _place;
+            },
+            onPlaceCardClose: () {
+              // print("Place Card closed");
+            },
+            reverse: true,
+            onMapCreated: _onMapCreated,
+            initialCameraPosition: CameraPosition(
+              target: myLatLng,
+              zoom: 16.0,
+            ),
+            // destinationIcon: "assets/symbols/destination.png",
+          ),
+        ],
+      ),
+    );
   }
 }
 
